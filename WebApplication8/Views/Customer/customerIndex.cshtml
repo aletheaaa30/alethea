@@ -6,7 +6,10 @@
 
     @model WebApplication8.Models.user;
 
+    var name = ViewBag.name;
+
     ViewData["title"] = "Customer Dash";
     <h1>Customer Dashboard</h1>
-    @ViewBag.name;
+    <h3>Sales metrics</h3>
+    <p>Welcome  @name</p>
 }

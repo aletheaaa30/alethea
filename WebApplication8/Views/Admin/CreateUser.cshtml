@@ -3,7 +3,7 @@
 *@
 @{
     @model WebApplication8.Models.user;
-
+     
     <form asp-action="AddUser" asp-controller="Home" method="post">
         Name:
         @Html.TextAreaFor(u => u.name);
@@ -11,6 +11,10 @@
         @Html.TextAreaFor(u => u.email);
         Password:
         @Html.TextAreaFor(u => u.password);
+        Role:
+        @Html.DropDownListFor(m => m.role, 
+            new SelectList(Enum.GetValues(typeof(user.roles))), 
+            "Select Role")
         <input type="submit" value="Submit" />
     </form>
 }
