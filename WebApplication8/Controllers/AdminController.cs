@@ -16,16 +16,22 @@ namespace WebApplication8.Controllers
             return View();
         }
 
-        public  IActionResult ShowUsers()
+        public IActionResult ShowUsers(string error = "")
         {
             //Database call to get the list of available users
             ViewBag.usersList = userData.userList;
             //Console.WriteLine(userData.userList);
+            ViewBag.errorMessage = error;
             return View();
-   
+
         }
 
-
+        public IActionResult DeleteUser()
+        {
+           // ViewBag.usersList = userData.userList;
+           // ViewBag.errorMessage = "The User is not found";
+            return View();
+        }
 
     }
 }
