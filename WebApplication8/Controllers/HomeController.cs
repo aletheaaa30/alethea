@@ -99,7 +99,7 @@ namespace WebApplication8.Controllers
             {
                 if (eachUser.email != userEmail.email)
                 {
-                    return RedirectToAction("ShowUsers", new { error = "The User is not found"});
+                    return RedirectToAction("ShowUsers", "Admin", new { error = "The User is not found" });
                 }
             }
             return RedirectToAction("ShowUsers", "Admin");
